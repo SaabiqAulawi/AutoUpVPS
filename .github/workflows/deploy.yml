@@ -5,7 +5,7 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - master
+      - main
 
 # Pekerjaan (jobs) yang akan dieksekusi
 jobs:
@@ -30,8 +30,8 @@ jobs:
             # Masuk ke direktori proyek di VPS
             cd ${{ secrets.VPS_PROJECT_PATH }}
 
-            # Tarik perubahan terbaru dari branch master
-            git pull origin master
+            # Tarik perubahan terbaru dari branch main
+            git pull origin main
 
             # --- CONTOH PERINTAH TAMBAHAN (SESUAIKAN DENGAN PROYEK ANDA) ---
 
